@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+
+*{
+    margin:0;
+}
+html{
+    /*  плавное скролл страницы */
+    scroll-behavior: smooth; 
+}
+body{
+    background-color: rgb(44, 44, 44);
+    font-family: "Rubik";
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+/*nav panel*/
+.navigation_panel{
+    background: rgb(0, 0, 0);
+    height: 50px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.nav_logo{
+    margin-left: 20%;
+    margin-right: 15%;
+    text-transform: uppercase;
+    border-bottom: 1px solid cyan;
+
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.nav_button{
+    text-decoration: none;
+    color:white;
+    margin-left: 50px;
+    width:70px;
+    text-align:center;
+}
+.nav_button:hover{
+    border-bottom: 1px solid orangered;
+}
+@media screen and (max-width: 530px) 
+{
+    .menu {
+       display: none; /*пункты меню скрыты */
+      background: #f1f2f4;
+      position: absolute;
+    }
+
+    #welcome-main{
+        flex-direction: column;
+    }
+}
+/*section welcome*/
+#welcome-main{
+    display:flex;
+    color: white;
+    height:700px;
+    background: url(assets/welcome_back.jpg);
+    /* margin-left: 10%;
+    margin-top: 100px; */
+}
+#welcome-image{
+    margin-left: 50px;
+}
+.welcome-wrapper{
+    margin: 10%;
+    display:flex;
+}
+img{
+    width: 300px;
+    max-width: 100%;
+}
+h2{    font-weight: normal; font-size: 32px;}
+.description{
+    margin-top:10px;
+    color:rgba(177, 177, 177, 0.726);
+}
+.button{
+    background: none;
+    padding: 6px 12px;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+    border: 2px solid rgb(42, 100, 209);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* portfolio ---*/
+#portfolio{
+    display: flex;
+    /* height: 600px; */
+    background: gray;
+    align-items: center;
+    flex-direction: column;
+}
+#portfolio > h3{
+    font-weight: normal;
+    font-size: 30px;
+    margin-top:50px;
+    height: 30px;
+}
+.card-container{
+    max-width: 80%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    overflow:auto; 
+    flex-wrap: wrap;
+   
+}
+.work-card{
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 10px;
+    border-radius: 10px;
+    /* border: 3px black solid; */
+    background-color: white;
+    color:black;
+}
+.work-card > img{
+    max-width: 400px;
+    border-radius: 7px 7px 0px 0px;
+    max-height: 200px;
+}
+.work-card a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.work-card:hover{
+    opacity: 0.7;
+}
+/* skills*/
+#skills{
+    display:flex;
+    width: 100%;
+    background: rgb(34, 34, 34);
+    align-items: center;
+    flex-direction: column;
+    
+}
+#skills > h3{
+    margin-top: 30px;
+    font-weight: normal;
+    font-size: 30px;
+}
+.skills_container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;;
+}
+.skill_card{
+    margin: 5px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+/*contact ---*/
+#contact{
+
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#contact > h3{
+    margin:30px;
+    font-weight: normal;
+    font-size: 30px;
+}
+#contact p{
+    color:rgba(141, 141, 141, 0.767);
+}
+#contact > form{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+#contact form {
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  }
+#contact input,
+#contact textarea {
+    width: 100%;
+    margin: 10px 0;
+}
+#contact .button {
+    margin-top: 10px;
+    align-self: center;
+}
+input,
+textarea {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #f2f2f2;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #9893d8;
+}
+/*footer*/
+footer{
+    background: rgb(32, 32, 32);
+    display:flex;
+    height: 100px;
+    background: url(assets/contact_me.png);
+}
+footer > p{
+    margin-left: 30px;
+    width: 30%;
+    justify-self: center;
+    align-self: center;
+}
+footer > .social_links{
+    float:right;
+}
+.social_links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:right;
+}
+.social_links * img{
+    width: 30px;
+    margin: 3px;
+    max-width: 100%;
+}
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background: rgba(0,0,0,0);
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: #494949;
+    border-radius: 9em;
+
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #253861;
+}
+/* это что, адаптивность?*/
+
+/*Clock. Razrabotka VasiCha(menya)*/
+
+.main-clock{
+    font-size: 30px;
+    width: 50%;
+    
+}
+.timestamps {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.rutime{
+    display:flex;
+    align-items: center;
+}
+#clock-ru{
+    margin: 10px;
+}
+
+.timestamps * img{
+    width: 5%;
+}
+/* github*/
+.git-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+
+}
+.card {
+    max-width: 800px;
+    max-height: 300px;
+    background-color: #11353a;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+      0 15px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 3rem;
+    margin: 0 1.5rem;
+  }
+  .avatar {
+    border-radius: 50%;
+    border: 10px solid #fa004b;
+    max-width: 150px;
+    height: 150px;
+  }
+  
+  .user-info {
+    color: #eee;
+    margin-left: 2rem;
+  }
+  
+  .user-info h2 {
+    margin-top: 0;
+  }
+  
+  .user-info ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 400px;
+  }
+  
+  .user-info ul li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+  }
+  
+  .repo {
+    text-decoration: none;
+    color: #fff;
+    background-color: #212a72;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  
+  @media (max-width: 500px) {
+    .card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .user-form {
+      max-width: 400px;
+    }
+  
+    .user-info {
+      margin-left: 0;
+    }
+  }
+  
